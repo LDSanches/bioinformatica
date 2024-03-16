@@ -84,3 +84,71 @@ print('O preço final do produto é: R$', total_price)
 ##################
 ##### Aula 2 #####
 
+# Operadores Ralacionais
+
+2 > 3
+False
+
+2 < 3
+True
+
+'Oi' == 'Oi'
+True
+
+2 == '2'
+False
+
+2 + 3 == 3 + 2 * 1
+True
+
+
+# Expressões Lógicas
+[ ] True and True
+True
+
+[ ] True and False
+False
+
+[ ] True or False
+True
+
+[ ] (3 > 1) and (3 > 2)
+True
+
+[ ] (3 > 1) and (1 > 3)
+False
+
+[ ] almocei = True
+   jantei = False
+
+almocei or jantei
+True
+
+
+# Condicionais
+estou_com_fome = True
+
+if estou_com_fome:
+    print('Vou almoçar!')
+
+print('Vou a academia')
+
+
+
+# Exercicio:
+idade = int(input('Qual a sua idade? '))
+idate_maior_18 = idade >= 18
+
+if idate_maior_18:
+    print('Aceita algum drink?')
+else:
+    print('Aceita refrigerante ou água?')
+
+print('Obrigado e volte sempre!')
+
+
+if not idate_maior_18:
+    print('Aceita refrigerante ou água?')
+
+print('Obrigado e volte sempre!')
+
