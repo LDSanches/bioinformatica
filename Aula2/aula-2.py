@@ -1,3 +1,6 @@
+##################
+##### Aula 1 #####
+
 # print hello world
 print('Hello World')
 
@@ -60,7 +63,7 @@ user_number = int(input('Please enter with a number: '))
 sub_number = int(user_number - 1)
 adc_number = int(user_number + 1)
 plus_number = int(user_number * 2)
-raiz_number = float(user_number ** (1/2))
+raiz_number = int(user_number ** (1/2))
 
 print('O antecessor do numero', user_number, 'é:', sub_number)
 print('O sucesssor do numero', user_number, 'é', adc_number)
@@ -69,10 +72,15 @@ print('A raiz quadrada do numero', user_number, 'é:', raiz_number)
 
 
 # Exercise 3
-price_number = float(input('Please enter with the price: R$'))
-desc_number = int(input('What is the percent of descont: '))
+price_number = float(input('Digite o preço do produtos em reais R$ 1999.99: R$ '))
+desc_number = int(input('Digite o desconto a ser aplicado (em porcentagem): '))
 
 total_desc_price = float(price_number * (desc_number / 100))
 total_price = float(price_number - total_desc_price)
 
-print('The product price is: R$', total_price)
+print('O preço final do produto é: R$', total_price)
+
+
+##################
+##### Aula 2 #####
+
