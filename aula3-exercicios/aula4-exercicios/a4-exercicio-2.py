@@ -1,7 +1,7 @@
 # Exercício 2 - Calculando o RPK de Organismos
 # rpk = reads_organismo / (tamanho_do_genoma_do_organismo * 1000)
 
-organismos = [
+dicionario_organismos = [
     {
         "nome": "Human immunodeficiency virus 1",
         "reads": 1000000,
@@ -20,8 +20,8 @@ organismos = [
 
 ]
 
-for calculo_rpk in organismos:
-    calculo_rpk["rpk"] = calculo_rpk["reads"] / (calculo_rpk["tamanho_genoma"] * 1000)
-    print(calculo_rpk["rpk"])
+for novo_organismo in dicionario_organismos:
+    novo_organismo["rpk"] = novo_organismo["reads"] / (novo_organismo["tamanho_genoma"] * 1000)
+    print(novo_organismo["rpk"])
 
-print(organismos)
+print(dicionario_organismos)
