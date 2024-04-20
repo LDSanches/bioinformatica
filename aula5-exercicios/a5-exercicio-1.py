@@ -1,4 +1,4 @@
-# Exercicio 1 funçoes:
+# Exercicio 1 funçoes - Fatorial:
 def calcular_fatorial(numero):
     fatorial = 1
 

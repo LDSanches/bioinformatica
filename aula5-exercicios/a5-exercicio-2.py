@@ -1,3 +1,5 @@
+# Exercicio 2 funcoes - Soma numeros
+
 def soma_numeros(num1, num2, num3):
     soma_total = (num1 + num2 + num3)
     return soma_total
