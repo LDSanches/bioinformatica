@@ -46,17 +46,17 @@ resposta = 1
 numero = int(input('Digite um número: '))
 
 for i in range(numero, 0, -1):
-    resposta = resposta * 1
+    resposta = resposta * i
 
 print(f"0 fatorial de {numero} é {resposta}.")
 
 
 # Outro exemplo com WHILE:
 numero = int(input('Digite um número: '))
-range = 1
+fatorial = 1
 
-while range <= numero:
-    resposta = (numero * range) * resposta
-    range += 1
+while numero >= 1:
+    fatorial *= numero
+    numero -= 1
 
 print(f"0 fatorial de {numero} é {resposta}.")
