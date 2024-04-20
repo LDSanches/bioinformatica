@@ -1,0 +1,60 @@
+# """
+# #### Exercício 3 - Comparando listas.
+# 
+# Receba duas listas de input do usuário. Ele digitará como um texto com os números separados por vígula. 
+# Para isso, pode-se utilizar o código disponibilizado que vai transformar esse texto em lista para você.
+# 
+# Eu quero que você me diga qual das listas tem o maior número dentro delas. 
+# 
+# Se a primeira lista tiver o maior número, imprima: "Primeira".
+# Se a segunda lista tiver o maior número, imprima: "Segunda".
+# Se ambas tiverem o mesmo número como maior, digite: "Ambas".
+# 
+# Exemplos:
+# 
+# ----------------------------------
+# 
+# Digite a sua primeira lista (separando os números por vírgula): 1, 50, 2, 40
+# Digite a sua segunda lista (separando os números por vírgula): 0, 2, 99, 1, 1, 3
+# 
+# Resposta:
+# Segunda
+# 
+# ----------------------------------
+# 
+# Digite a sua primeira lista (separando os números por vírgula): 1, 0, 2, 30
+# Digite a sua segunda lista (separando os números por vírgula): 9, 9, 9, 30
+# 
+# Resposta:
+# Ambas
+# """
+# 
+# # Código para pegar as listas de input
+# primeira_lista = [*map(int, input("Digite a sua primeira lista (separando os números por vírgula): ").split(","))]
+# segunda_lista = [*map(int, input("Digite a sua segunda lista (separando os números por vírgula): ").split(","))]
+# 
+# # Fazer a partir daqui
+
+p_lista = [*map(int,input("Digite a sua primeira lista (separando os números por vírgula): ").split(","))]
+s_lista = [*map(int,input("Digite a sua segunda lista (separando os números por vírgula): ").split(","))]
+
+tamanho_p = len(p_lista)
+tamanho_s = len(s_lista)
+
+maior_p = 0
+maior_s = 0
+
+for i in range(tamanho_p):
+    if maior_p < p_lista[i]:
+        maior_p = p_lista[i]
+
+for j in range(tamanho_s):
+    if maior_s < s_lista[j]:
+        maior_s = s_lista[j]
+
+if maior_p == maior_s:
+    print(f'Resposta:\nAmbas')
+elif maior_p > maior_s:
+    print(f'Resposta:\nPrimeira')
+else:
+    print(f'Resposta:\nSegunda')
