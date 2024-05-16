@@ -20,6 +20,16 @@ Exemplo de uso:
 """
 
 def calcular_salario(pessoa):
-    # Completar funcao
+    if "salario_variavel" in pessoa:
+        pessoa['salario_total'] = pessoa['salario_fixo'] + pessoa['salario_variavel']
+    else:
+        pessoa['salario_total'] = pessoa['salario_fixo']
+
     return pessoa
+
+#pessoa = {"nome": "Michel", "salario_fixo": 1000}
+#print(calcular_salario(pessoa))
+
+#pessoa = {"nome": "João", "salario_fixo": 10000, "salario_variavel": 20000}
+#print(calcular_salario(pessoa))
 
