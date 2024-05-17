@@ -20,6 +20,10 @@ def verificar_se_eh_primo(numero):
 
 def filtrar_lista_por_numeros_primos(lista):
     lista_filtrada = []
-    # Completar funcao aqui!
+    for i in range(len(lista)):
+        if verificar_se_eh_primo(lista[i]) == True:
+            lista_filtrada.append(lista[i])
+
     return lista_filtrada
 
+#print(filtrar_lista_por_numeros_primos([10, 11, 50, 13, 99, 7]))
