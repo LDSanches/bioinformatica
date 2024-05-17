@@ -1,40 +1,24 @@
 """
-Exercício Exemplo - Achar maior valor:
+Exercício 1 - Escrevendo uma função.
 
-Esse é um exercício de exemplo.
+Escreva uma função com o nome `verificar_nota` que recebe um nota e diz se o aluno foi aprovado, ficou de recuperação ou foi reprovado.
 
-Crie uma função que recebe uma lista e retorna o maior valor dessa lista.
+Se a nota foi > 5 -> retorne "Aprovado".
+Se a nota foi entre 3 e 5 -> retorne "Recuperação".
+Se a nota for < 3 -> retorne "Reprovado".
 
-A função deve se chamar necessariamente `achar_maior_valor`, por ela vai ser importada para teste usando esse nome.
-
-Ex:
->>> print(achar_maior_valor([1, 10, 11]))
->>> 11
+Obs: Escreva necessariamente uma função que retorne (não só imprima) esses valores. De exatamente o nome de `verificar_nota` porque
+o teste vai procurar uma função com esse nome.
 """
+def verificar_nota(nota):
+    if nota > 5:
+        nota_final = "Aprovado"
+    #elif nota >= 3 and nota <= 5:
+    elif 3 <= nota <= 5:
+        nota_final = "Recuperação"
+    else:
+        nota_final = "Reprovado"
+    return nota_final
 
-# Exemplo de resolução:
-def achar_maior_valor(lista):
-    maior_valor = 0
-    for i in range(len(lista)):
-        if i == 0:
-            maior_valor = lista[i]
-        elif lista[i] > maior_valor:
-            maior_valor = lista[i]
-    return maior_valor
 
-"""
-Obs: Para esse exercício não é necessário chamar a função `achar_maior_valor` nesse arquivo, 
-porque o arquivo de testes irá importar sua funcao e testar ela, por exemplo:
-
-def test_ex_0():
-    import exercicio_0_exemplo
-    
-    assert exercicio_0_exemplo.achar_maior_valor([1, 88, 0]) == 88
-    assert exercicio_0_exemplo.achar_maior_valor([-1, -10, -100]) == -1
-    
-Porém para você validar se sua funcao esta funcionando local, recomendo que você chame sua funcão algumas vezes:
-"""
-
-# Ex:
-print(achar_maior_valor([1, 10, 11]))
-print(achar_maior_valor([-1, -100, -111]))
+#print(verificar_nota(6))

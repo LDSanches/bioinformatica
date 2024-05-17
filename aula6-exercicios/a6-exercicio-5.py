@@ -1,35 +1,29 @@
 """
-Exercício 4 - Modificando um dicionário
+Exercicio 5 - Usando funcoes
 
-Complete a funcao que recebe um dicionário que contém os dados de uma pessoa.
+Você vai escrever uma funcao que recebe uma lista com números e deve retornar uma outra lista
+só com os números primos. (Parecido com o exercício 2 da aula 3).
 
-O dicionário vai conter os campos nome, salario_fixo e pode ou não conter o campo salario_variavel.
-
-Eu quero que adicione o campo salario_total no dicionário e retorne ele.
-
-Se o dicionario não conter o campo salario_variavel o salario_total vai ser igual o salario_fixo, se conter
-vai ser igual ao salario_fixo + salario_variavel.
-
-Exemplo de uso:
->>> pessoa = {"nome": "Michel", "salario_fixo": 1000}
->>> print(calcular_salario(pessoa))
->>> {"nome": "Michel", "salario_fixo": 1000, "salario_total": 1000}
->>> pessoa = {"nome": "João", "salario_fixo": 10000, "salario_variavel": 2000}
->>> print(calcular_salario(pessoa))
->>> {"nome": "João", "salario_fixo": 10000, "salario_variavel": 2000, "salario_total": 12000}
+Mas você não precisa escrever a lógica para saber se o número é primo: você pode só usar a funcão
+`verificar_se_eh_primo` disponibilizada, que vai retornar True se o número for primo e False se não for.
 """
 
-def calcular_salario(pessoa):
-    if "salario_variavel" in pessoa:
-        pessoa['salario_total'] = pessoa['salario_fixo'] + pessoa['salario_variavel']
-    else:
-        pessoa['salario_total'] = pessoa['salario_fixo']
 
-    return pessoa
+def verificar_se_eh_primo(numero):
+    if numero > 1:
+        for i in range(2, int(numero / 2) + 1):
+            if (numero % i) == 0:
+                return False
+        return True
+    return False
 
-#pessoa = {"nome": "Michel", "salario_fixo": 1000}
-#print(calcular_salario(pessoa))
 
-#pessoa = {"nome": "João", "salario_fixo": 10000, "salario_variavel": 20000}
-#print(calcular_salario(pessoa))
+def filtrar_lista_por_numeros_primos(lista):
+    lista_filtrada = []
+    for i in range(len(lista)):
+        if verificar_se_eh_primo(lista[i]) == True:
+            lista_filtrada.append(lista[i])
 
+    return lista_filtrada
+
+#print(filtrar_lista_por_numeros_primos([10, 11, 50, 13, 99, 7]))

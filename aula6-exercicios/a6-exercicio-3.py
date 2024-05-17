@@ -1,20 +1,21 @@
 """
-Exercício 2 - Criando um dicionário
+Exercício 3 - Calculando a média de uma lista
 
-Escreva uma função com o nome `criar_organismo` que recebe 3 argumentos: id, nome, tamanho_do_genoma e retorna um
-dicionário contendo esses três campos (com as chaves "id", "nome" e "tamanho_do_genoma").
+Escreva uma funcao chamada `calcular_media` (sem acento) que recebe uma lista com numeros
+e retorne a média dos valores dela.
 
 Exemplo de uso:
->>> print(criar_organismo(10, 'HIV', 1000))
->>> {"id": 10, "nome": "HIV", 1000}
+>>> print(calcular_media([0, 100, 200]))
+>>> 100
 """
 
-def criar_organismo(id, nome, tamanho):
-    dicionario = {
-        'id': id, 
-        'nome': nome,
-        'tamanho_do_genoma': tamanho,
-    }
-    return dicionario
+def calcular_media(lista_de_numeros):
+    #tamanho_lista = len(lista_de_numeros)
+    valor_total = 0
+    for i in range(len(lista_de_numeros)):
+        valor_total = (lista_de_numeros[i] + valor_total)
+    
+    media_valores = (valor_total / len(lista_de_numeros))
+    return media_valores
 
-#print(criar_organismo(10, 'HIV', 1000))
+#print(calcular_media([0, 100, 200]))

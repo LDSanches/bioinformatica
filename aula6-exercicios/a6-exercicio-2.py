@@ -1,24 +1,20 @@
 """
-Exercício 1 - Escrevendo uma função.
+Exercício 2 - Criando um dicionário
 
-Escreva uma função com o nome `verificar_nota` que recebe um nota e diz se o aluno foi aprovado, ficou de recuperação ou foi reprovado.
+Escreva uma função com o nome `criar_organismo` que recebe 3 argumentos: id, nome, tamanho_do_genoma e retorna um
+dicionário contendo esses três campos (com as chaves "id", "nome" e "tamanho_do_genoma").
 
-Se a nota foi > 5 -> retorne "Aprovado".
-Se a nota foi entre 3 e 5 -> retorne "Recuperação".
-Se a nota for < 3 -> retorne "Reprovado".
-
-Obs: Escreva necessariamente uma função que retorne (não só imprima) esses valores. De exatamente o nome de `verificar_nota` porque
-o teste vai procurar uma função com esse nome.
+Exemplo de uso:
+>>> print(criar_organismo(10, 'HIV', 1000))
+>>> {"id": 10, "nome": "HIV", 1000}
 """
-def verificar_nota(nota):
-    if nota > 5:
-        nota_final = "Aprovado"
-    #elif nota >= 3 and nota <= 5:
-    elif 3 <= nota <= 5:
-        nota_final = "Recuperação"
-    else:
-        nota_final = "Reprovado"
-    return nota_final
 
+def criar_organismo(id, nome, tamanho):
+    dicionario = {
+        'id': id, 
+        'nome': nome,
+        'tamanho_do_genoma': tamanho,
+    }
+    return dicionario
 
-#print(verificar_nota(6))
+#print(criar_organismo(10, 'HIV', 1000))
