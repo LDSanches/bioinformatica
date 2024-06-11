@@ -8,6 +8,7 @@ Mas você não precisa escrever a lógica para saber se o número é primo: voc�
 `verificar_se_eh_primo` disponibilizada, que vai retornar True se o número for primo e False se não for.
 """
 
+import statistics
 
 def verificar_se_eh_primo(numero):
     if numero > 1:
