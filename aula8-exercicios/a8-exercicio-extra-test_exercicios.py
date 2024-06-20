@@ -1,4 +1,4 @@
-idef test_ex_0():
+def test_ex_0():
     import exercicio_0_exemplo
 
     assert exercicio_0_exemplo.achar_maior_valor([1, 88, 0]) == 88
