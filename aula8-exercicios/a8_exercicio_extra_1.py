@@ -17,13 +17,15 @@ def calcular_area_e_perimetro_circulo(raio):
     perimetro = 2 * math.pi * raio
     return area, perimetro
 
+'''
 # Teste igual ao test_exercicios.py:
 
-#area = round(calcular_area_e_perimetro_circulo(10)[0])
-#perimetro = round(calcular_area_e_perimetro_circulo(10)[1])
+area = round(calcular_area_e_perimetro_circulo(10)[0])
+perimetro = round(calcular_area_e_perimetro_circulo(10)[1])
 
-#area = round(calcular_area_e_perimetro_circulo(3)[0])
-#perimetro = round(calcular_area_e_perimetro_circulo(3)[1])
+area = round(calcular_area_e_perimetro_circulo(3)[0])
+perimetro = round(calcular_area_e_perimetro_circulo(3)[1])
 
-#print(f"Área: {area}")
-#print(f"Perímetro: {perimetro}")
+print(f"Área: {area}")
+print(f"Perímetro: {perimetro}")
+'''
